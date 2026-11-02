@@ -50,4 +50,5 @@ I earned my first money cleaning yards and washing cars and fences for wealthy f
 
 I'm looking for roles where I can come up with product ideas, build applications and use AI to solve real problems. E-invoicing and document data are where my experience runs deepest.
 
+📺 [morcatt.github.io](https://morcatt.github.io): the same story as a TV you can switch on<br>
 📫 [catmoroshan@gmail.com](mailto:catmoroshan@gmail.com)
