@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/header.svg" alt="Catalin: I automate anything that repeats. ETL developer, founder of Morcatt Labs, Moldova."></p>
+<p align="center"><img src="assets/header.svg" alt="Cătălin: I automate anything that repeats. ETL developer, founder of Morcatt Labs, Moldova."></p>
 
 <p align="center"><img src="assets/stats.svg" alt="5+ years in document data, 500+ extraction templates, ZUGFeRD and XRechnung e-invoicing focus"></p>
 
