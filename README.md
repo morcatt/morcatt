@@ -39,9 +39,12 @@ I run my own home automation on Zigbee and self-host my services on my own serve
 
 ## 🛤️ How I got here
 
-PC repair → printing → logo design → WordPress sites → university apps → callback technician → ETL developer
+I earned my first money cleaning yards and washing cars and fences for wealthy families. Everything since, I taught myself or studied for.
 
-Along the way: 8 years of college and university in database administration and applied informatics.
+- **🖥️ Hardware & networks:** PC repair, callback technician, surveillance camera installs
+- **🎨 Design & print:** printing, logo design
+- **🌐 Software:** WordPress sites, university apps, Cattport
+- **📊 Data:** database administration and applied informatics (8 years of study), ETL development
 
 ## 🤝 Let's talk
 
