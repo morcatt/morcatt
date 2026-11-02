@@ -22,7 +22,7 @@ I started out fixing PCs. Today I turn messy documents into reliable data for in
 
 ## 🏠 Beyond work
 
-I run my own home automation on Zigbee and self-host my services on a Synology NAS with Docker, including single sign-on (OIDC). I've also installed surveillance camera systems.
+I run my own home automation on Zigbee and self-host my services on my own server with Docker, including single sign-on (OIDC). I've also installed surveillance camera systems.
 
 ## 🧰 Tools
 
