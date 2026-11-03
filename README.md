@@ -85,7 +85,7 @@ Every project sits on its stage and moves right as it grows.
 
 Got a problem that looks too complicated, or too boring, to automate? Write to me. Boring is my favourite. I'm open to roles where I can shape product ideas, build applications and use AI on real problems, anywhere in the world.
 
-🗣️ Romanian · English · Russian · German for business and finance terms, learning the rest · Some Spanish
+🗣️ Romanian · English · Russian · Basic Spanish · German for business and finance terms, learning the rest
 
 <a href="https://morcatt.github.io"><b>Website</b></a> · <a href="https://www.linkedin.com/in/morcatt/"><b>LinkedIn</b></a> · <a href="https://github.com/morcatt-labs"><b>Morcatt Labs</b></a> · <a href="mailto:catmoroshan@gmail.com"><b>Email</b></a>
 
