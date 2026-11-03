@@ -7,14 +7,14 @@ person:
   role: Data · Automation · AI · Products · Moldova
   plain: >-
     Companies are full of work people repeat by hand: reading documents, answering the same questions,
-    moving data between systems. I build the systems that take that work over, and my own products on the side. Sleep is in the backlog.
+    moving data between systems. I build the systems that take that work over, and my own products on the side.
   now: Taking Cattport from public beta into the SynoCommunity package catalog.
   # The header types these one after another, one per area of work.
   terminal:
     - { cmd: "cat invoice.pdf | rules | xml", note: finance }
-    - { cmd: "docker compose up -d", note: home server }
-    - { cmd: 'chatbot --reply "have you tried restarting?"', note: AI }
-    - { cmd: "git push --force-with-confidence", note: products }
+    - { cmd: "docker compose up -d", note: infrastructure }
+    - { cmd: "chatbot deploy --channel web", note: AI }
+    - { cmd: "git tag v1.0 && git push --tags", note: products }
   languages: Romanian · English · German for business and finance terms, learning the rest
   links:
     - { label: Website, url: "https://morcatt.github.io" }
@@ -27,7 +27,7 @@ areas:
   - { icon: "⚙️", title: Automation & data, text: "500+ extraction templates that turn documents in many languages into structured data, validated against international standards." }
   - { icon: "🤖", title: AI integrations, text: "An AI chatbot for a national telecom operator, from website integration and dialogue flows to identifying customers." }
   - { icon: "🚀", title: Products & apps, text: "Cattport, an open-source package in public beta, plus websites and web services. Mobile apps are next." }
-  - { icon: "🛠️", title: Infrastructure, text: "My own server with Docker and single sign-on, a smart home, networks and camera systems I installed myself." }
+  - { icon: "🛠️", title: Infrastructure, text: "Self-hosted services on my own server: Docker, single sign-on, secure remote access and backups." }
 
 # Selected work: problem, what I did, result.
 stories:
@@ -65,14 +65,11 @@ projects:
 
 # The path, oldest first. Kinds: hardware, design, software, data, product.
 path:
-  - { label: Washing cars, note: "Still my cleanest work", kind: start }
-  - { label: PC repair, note: "Where IT began", kind: hardware }
-  - { label: "Print & logos", note: "Design by hand", kind: design }
-  - { label: Websites, note: "WordPress", kind: software }
-  - { label: University apps, note: "First real software", kind: software }
-  - { label: Callback technician, note: "Telecom, networks", kind: hardware }
-  - { label: 8 years of study, note: "Databases, informatics", kind: data }
-  - { label: ETL developer, note: "500+ templates", kind: data }
+  - { label: Hardware & networks, note: "Repair and telecom field work", kind: hardware }
+  - { label: Design & web, note: "Print, brand, WordPress", kind: design }
+  - { label: Databases & informatics, note: "8 years of study", kind: data }
+  - { label: AI chatbot, note: "National telecom operator", kind: software }
+  - { label: ETL developer, note: "500+ templates, 5+ years", kind: data }
   - { label: Morcatt Labs, note: "My own products", kind: product }
 
 principles:
@@ -83,35 +80,26 @@ principles:
   - title: "Ship, then sharpen."
     text: "A public beta with real users teaches more than a perfect plan."
 
-# daily: what I use every week at work or at home. used: what I have worked with.
+# daily: what I use every week at work or at home. used: what I have shipped work with.
 toolbox:
   - area: Data & cloud
     daily: [SQL, Python, Google Cloud, BigQuery, Cloud SQL]
-    used: [PostgreSQL, MySQL, SQL Server, Oracle, SQLite, pandas, Advanced Excel]
+    used: [PostgreSQL, MySQL, SQL Server, Oracle, pandas]
   - area: Documents & e-invoicing
-    daily: [PDF, XML, ZUGFeRD, EN 16931, XRechnung, Schematron, Regex, In-house mapping tools]
-    used: [Factur-X, Peppol, UBL, CII, XSD, JSON, EDIFACT, OCR, DataStage TX-style mapping]
+    daily: [PDF, XML, ZUGFeRD, EN 16931, XRechnung, Schematron, Regex]
+    used: [Factur-X, Peppol, UBL, CII, XSD, EDIFACT, OCR, DataStage TX-style mapping]
   - area: Code
-    daily: [Python, Bash, Terminal]
-    used: [C#, Java, JavaScript, HTML & CSS, Tailwind, C++, PHP, Flask, Node.js, React, Assembly]
-  - area: Infrastructure & security
+    daily: [Python, Bash]
+    used: [C#, Java, JavaScript, HTML & CSS, React, Node.js, Flask]
+  - area: Infrastructure & networks
     daily: [Docker]
-    used: [Docker Compose, Portainer, Linux, Reverse proxy, OIDC / SSO, Git, Cloudflare, WireGuard, Tailscale, Firewall, Backup & restore]
-  - area: Networks & hardware
-    daily: []
-    used: [PC building & repair, LAN & Wi-Fi, Routers, Structured cabling, IP cameras / CCTV, Hikvision, NVR / DVR, Frigate, On-site troubleshooting]
-  - area: Smart home
-    daily: []
-    used: [Home Assistant, Zigbee, Zigbee2MQTT, MQTT, ESPHome, Tuya]
+    used: [Linux, Git, Reverse proxy, OIDC / SSO, Cloudflare, WireGuard, LAN & Wi-Fi, IP camera systems]
   - area: AI
-    daily: [NotebookLM, ChatGPT, Claude, Gemini]
-    used: [GitHub Copilot, Ollama, LLM APIs, Prompt engineering]
-  - area: Design, video & print
+    daily: [ChatGPT, Claude, Gemini, NotebookLM]
+    used: [Ollama, LLM APIs, Chatbot platforms]
+  - area: Design & media
     daily: [Photoshop, Illustrator]
-    used: [InDesign, CorelDRAW, Lightroom, Fresco, Figma, Canva, Adobe Firefly, Premiere Pro, After Effects, DaVinci Resolve, Final Cut, WordPress, Elementor, Prepress]
-  - area: Teamwork
-    daily: [Google Workspace]
-    used: [Jira, Agile / Scrum, Kanban]
+    used: [InDesign, Figma, Premiere Pro, After Effects, DaVinci Resolve]
 
 closing: >-
   Got a problem that looks too complicated, or too boring, to automate? Write to me. Boring is my favourite.

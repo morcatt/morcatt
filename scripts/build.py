@@ -81,7 +81,7 @@ def header(t):
 <rect width="1200" height="320" rx="28" fill="{t['bg']}"/><rect width="1200" height="320" rx="28" fill="url(#dots)"/>
 <text x="64" y="132" font-size="66" font-weight="800" fill="{t['text']}" letter-spacing="-1.5">{escape(p['name'])}</text>
 <text x="66" y="182" font-size="28" font-weight="600" fill="{t['accent']}">{escape(p['headline'])}</text>
-<text x="66" y="222" font-size="18" fill="{t['muted']}">{escape(p['role'])}</text>
+<text x="66" y="222" font-size="22" fill="{t['muted']}">{escape(p['role'])}</text>
 {term}
 <rect x="656" y="92" width="112" height="150" rx="12" fill="{t['panel']}" stroke="{t['line']}" stroke-width="1.5"/>
 <rect x="672" y="106" width="34" height="14" rx="4" fill="{t['warm']}"/><text x="676" y="117" font-size="10" font-weight="700" fill="#fff">PDF</text>
@@ -145,7 +145,7 @@ def pipeline(t):
 # ---------- the path: each step lights up in turn, left to right ----------
 def path(t):
     steps = DATA["path"]
-    left, right, axis, cycle = 70, 1130, 140, 9
+    left, right, axis, cycle = 120, 1080, 140, 9
     span = (right - left) / (len(steps) - 1)
     run = 70  # percent of the cycle spent drawing the line
     keyframes = "".join(
@@ -302,7 +302,7 @@ Every project sits on its stage and moves right as it grows.
 {picture("toolbox", "Tools I use every week, by area")}
 
 <details>
-<summary><b>All {sum(len(a['daily']) + len(a['used']) for a in DATA['toolbox'])} tools</b> (bold = every week; turning it off and on again not listed, but certified)</summary>
+<summary><b>All {sum(len(a['daily']) + len(a['used']) for a in DATA['toolbox'])} tools</b> (bold = every week)</summary>
 
 | Area | Tools |
 |---|---|
@@ -312,7 +312,7 @@ Every project sits on its stage and moves right as it grows.
 
 ## Path
 
-{picture("path", "Path from first money to Morcatt Labs")}
+{picture("path", "Path from hardware and networks to Morcatt Labs")}
 
 <details>
 <summary><b>How I work</b></summary>
@@ -329,7 +329,7 @@ Every project sits on its stage and moves right as it grows.
 
 {links}
 
-<sub>This profile builds itself from <a href="profile.yml">profile.yml</a>. I just take the credit.</sub>
+<sub>This profile builds itself from <a href="profile.yml">profile.yml</a>.</sub>
 """
 
 

@@ -2,13 +2,13 @@
 
 <p align="center"><a href="https://morcatt.github.io"><b>Website</b></a> · <a href="https://www.linkedin.com/in/morcatt/"><b>LinkedIn</b></a> · <a href="https://github.com/morcatt-labs"><b>Morcatt Labs</b></a> · <a href="mailto:catmoroshan@gmail.com"><b>Email</b></a></p>
 
-Companies are full of work people repeat by hand: reading documents, answering the same questions, moving data between systems. I build the systems that take that work over, and my own products on the side. Sleep is in the backlog.
+Companies are full of work people repeat by hand: reading documents, answering the same questions, moving data between systems. I build the systems that take that work over, and my own products on the side.
 
 > **Now:** Taking Cattport from public beta into the SynoCommunity package catalog.
 
 ## What I build
 
-<table><tr><td width="50%" valign="top"><h3>⚙️ Automation &amp; data</h3>500+ extraction templates that turn documents in many languages into structured data, validated against international standards.</td><td width="50%" valign="top"><h3>🤖 AI integrations</h3>An AI chatbot for a national telecom operator, from website integration and dialogue flows to identifying customers.</td></tr><tr><td width="50%" valign="top"><h3>🚀 Products &amp; apps</h3>Cattport, an open-source package in public beta, plus websites and web services. Mobile apps are next.</td><td width="50%" valign="top"><h3>🛠️ Infrastructure</h3>My own server with Docker and single sign-on, a smart home, networks and camera systems I installed myself.</td></tr></table>
+<table><tr><td width="50%" valign="top"><h3>⚙️ Automation &amp; data</h3>500+ extraction templates that turn documents in many languages into structured data, validated against international standards.</td><td width="50%" valign="top"><h3>🤖 AI integrations</h3>An AI chatbot for a national telecom operator, from website integration and dialogue flows to identifying customers.</td></tr><tr><td width="50%" valign="top"><h3>🚀 Products &amp; apps</h3>Cattport, an open-source package in public beta, plus websites and web services. Mobile apps are next.</td><td width="50%" valign="top"><h3>🛠️ Infrastructure</h3>Self-hosted services on my own server: Docker, single sign-on, secure remote access and backups.</td></tr></table>
 
 ## Selected work
 
@@ -55,25 +55,22 @@ Every project sits on its stage and moves right as it grows.
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/toolbox-dark.svg"><img src="assets/toolbox-light.svg" alt="Tools I use every week, by area" width="100%"></picture>
 
 <details>
-<summary><b>All 98 tools</b> (bold = every week; turning it off and on again not listed, but certified)</summary>
+<summary><b>All 57 tools</b> (bold = every week)</summary>
 
 | Area | Tools |
 |---|---|
-| Data & cloud | **SQL** · **Python** · **Google Cloud** · **BigQuery** · **Cloud SQL** · PostgreSQL · MySQL · SQL Server · Oracle · SQLite · pandas · Advanced Excel |
-| Documents & e-invoicing | **PDF** · **XML** · **ZUGFeRD** · **EN 16931** · **XRechnung** · **Schematron** · **Regex** · **In-house mapping tools** · Factur-X · Peppol · UBL · CII · XSD · JSON · EDIFACT · OCR · DataStage TX-style mapping |
-| Code | **Python** · **Bash** · **Terminal** · C# · Java · JavaScript · HTML & CSS · Tailwind · C++ · PHP · Flask · Node.js · React · Assembly |
-| Infrastructure & security | **Docker** · Docker Compose · Portainer · Linux · Reverse proxy · OIDC / SSO · Git · Cloudflare · WireGuard · Tailscale · Firewall · Backup & restore |
-| Networks & hardware | PC building & repair · LAN & Wi-Fi · Routers · Structured cabling · IP cameras / CCTV · Hikvision · NVR / DVR · Frigate · On-site troubleshooting |
-| Smart home | Home Assistant · Zigbee · Zigbee2MQTT · MQTT · ESPHome · Tuya |
-| AI | **NotebookLM** · **ChatGPT** · **Claude** · **Gemini** · GitHub Copilot · Ollama · LLM APIs · Prompt engineering |
-| Design, video & print | **Photoshop** · **Illustrator** · InDesign · CorelDRAW · Lightroom · Fresco · Figma · Canva · Adobe Firefly · Premiere Pro · After Effects · DaVinci Resolve · Final Cut · WordPress · Elementor · Prepress |
-| Teamwork | **Google Workspace** · Jira · Agile / Scrum · Kanban |
+| Data & cloud | **SQL** · **Python** · **Google Cloud** · **BigQuery** · **Cloud SQL** · PostgreSQL · MySQL · SQL Server · Oracle · pandas |
+| Documents & e-invoicing | **PDF** · **XML** · **ZUGFeRD** · **EN 16931** · **XRechnung** · **Schematron** · **Regex** · Factur-X · Peppol · UBL · CII · XSD · EDIFACT · OCR · DataStage TX-style mapping |
+| Code | **Python** · **Bash** · C# · Java · JavaScript · HTML & CSS · React · Node.js · Flask |
+| Infrastructure & networks | **Docker** · Linux · Git · Reverse proxy · OIDC / SSO · Cloudflare · WireGuard · LAN & Wi-Fi · IP camera systems |
+| AI | **ChatGPT** · **Claude** · **Gemini** · **NotebookLM** · Ollama · LLM APIs · Chatbot platforms |
+| Design & media | **Photoshop** · **Illustrator** · InDesign · Figma · Premiere Pro · After Effects · DaVinci Resolve |
 
 </details>
 
 ## Path
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/path-dark.svg"><img src="assets/path-light.svg" alt="Path from first money to Morcatt Labs" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/path-dark.svg"><img src="assets/path-light.svg" alt="Path from hardware and networks to Morcatt Labs" width="100%"></picture>
 
 <details>
 <summary><b>How I work</b></summary>
@@ -92,4 +89,4 @@ Got a problem that looks too complicated, or too boring, to automate? Write to m
 
 <a href="https://morcatt.github.io"><b>Website</b></a> · <a href="https://www.linkedin.com/in/morcatt/"><b>LinkedIn</b></a> · <a href="https://github.com/morcatt-labs"><b>Morcatt Labs</b></a> · <a href="mailto:catmoroshan@gmail.com"><b>Email</b></a>
 
-<sub>This profile builds itself from <a href="profile.yml">profile.yml</a>. I just take the credit.</sub>
+<sub>This profile builds itself from <a href="profile.yml">profile.yml</a>.</sub>
