@@ -47,7 +47,7 @@ def wrap(text, limit):
 # ---------- header: a document goes in on the left, clean XML comes out on the right ----------
 def header(t):
     p = DATA["person"]
-    xml = ["<Invoice>", "  <ID>RE-2041</ID>", "  <IssueDate>2026-11-03</IssueDate>", "  <Total>1240.00</Total>", "  <Currency>EUR</Currency>", "</Invoice>"]
+    xml = ["<Invoice>", "  <ID>RE-2041</ID>", "  <Date>2026-11-03</Date>", "  <Total>1240.00</Total>", "  <Currency>EUR</Currency>", "</Invoice>"]
     cycle = 7
     keyframes = "".join(
         f"@keyframes x{i} {{ 0%, {30 + i * 7}% {{ opacity: 0; }} {34 + i * 7}%, 90% {{ opacity: 1; }} 100% {{ opacity: 0; }} }} .x{i} {{ animation: x{i} {cycle}s infinite; }}"
@@ -58,10 +58,19 @@ def header(t):
         f"@keyframes t{i} {{ 0%, {i * slot:.1f}% {{ opacity: 0; }} {i * slot + 2:.1f}%, {(i + 1) * slot - 2:.1f}% {{ opacity: 1; }} {(i + 1) * slot:.1f}%, 100% {{ opacity: 0; }} }} .t{i} {{ animation: t{i} {turn}s infinite; }}"
         for i in range(len(lines)))
     term = "".join(
-        f'<text class="mono t{i}" x="66" y="268" font-size="14" fill="{t["muted"]}" opacity="{1 if i == 0 else 0}">$ {escape(l["cmd"])}'
+        f'<text class="mono t{i}" x="66" y="276" font-size="14" fill="{t["muted"]}" opacity="{1 if i == 0 else 0}">$ {escape(l["cmd"])}'
         f'<tspan fill="{t["accent"]}">  # {escape(l["note"])}</tspan></text>'
         for i, l in enumerate(lines))
-    style = (f"text {{ font-family: {SANS}; }} .mono {{ font-family: {MONO}; }}" + term_css +
+    hellos = p.get("greetings", [])
+    beat, last = 100 / max(len(hellos), 1), len(hellos) - 1
+    hello_css = "".join(
+        f"@keyframes g{i} {{ 0%, {i * beat:.1f}% {{ opacity: 0; transform: translateY(8px); }} {i * beat + 2:.1f}%, {(i + 1) * beat - 2:.1f}% {{ opacity: 1; transform: none; }} {(i + 1) * beat:.1f}%, 100% {{ opacity: 0; transform: translateY(-8px); }} }} .g{i} {{ animation: g{i} {2.2 * len(hellos)}s infinite; }}"
+        for i in range(len(hellos)))
+    hello = "".join(
+        f'<text class="g{i}{" mono" if i == last else ""}" x="66" y="78" font-size="28" font-weight="600" fill="{t["green"] if i == last else t["muted"]}" opacity="{1 if i == 0 else 0}">'
+        f'{escape(h)}{"" if i == last else ","}</text>'
+        for i, h in enumerate(hellos))
+    style = (f"text {{ font-family: {SANS}; }} .mono {{ font-family: {MONO}; }}" + term_css + hello_css +
              f"@keyframes scan {{ 0% {{ transform: translateY(0); opacity: 0; }} 8% {{ opacity: 1; }} 40% {{ transform: translateY(118px); opacity: 1; }} 46%, 100% {{ transform: translateY(118px); opacity: 0; }} }}"
              f".scan {{ animation: scan {cycle}s infinite; }}"
              f"@keyframes chip {{ 0%, 12% {{ transform: translateX(0); opacity: 0; }} 18% {{ opacity: 1; }} 44% {{ transform: translateX(150px); opacity: 1; }} 50%, 100% {{ transform: translateX(150px); opacity: 0; }} }}"
@@ -73,15 +82,16 @@ def header(t):
         for i in range(5))
     doc_lines = "".join(f'<rect x="672" y="{132 + i * 16}" width="{[70, 52, 64, 40, 58, 30][i]}" height="6" rx="3" fill="{t["line"]}"/>' for i in range(6))
     xml_lines = "".join(
-        f'<text class="mono x{i}" x="958" y="{122 + i * 22}" font-size="14" fill="{t["accent"] if not line.startswith(" ") else t["text"]}">{escape(line)}</text>'
+        f'<text class="mono x{i}" x="958" y="{122 + i * 22}" font-size="13" fill="{t["accent"] if not line.startswith(" ") else t["text"]}">{escape(line)}</text>'
         for i, line in enumerate(xml))
     body = f"""
 <defs><pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="{t['grid']}"/></pattern>
 <clipPath id="doc"><rect x="656" y="92" width="112" height="150" rx="12"/></clipPath></defs>
 <rect width="1200" height="320" rx="28" fill="{t['bg']}"/><rect width="1200" height="320" rx="28" fill="url(#dots)"/>
-<text x="64" y="132" font-size="66" font-weight="800" fill="{t['text']}" letter-spacing="-1.5">{escape(p['name'])}</text>
-<text x="66" y="182" font-size="28" font-weight="600" fill="{t['accent']}">{escape(p['headline'])}</text>
-<text x="66" y="222" font-size="22" fill="{t['muted']}">{escape(p['role'])}</text>
+{hello}
+<text x="64" y="144" font-size="66" font-weight="800" fill="{t['text']}" letter-spacing="-1.5">{"I'm " if hellos else ""}{escape(p['name'])}.</text>
+<text x="66" y="190" font-size="28" font-weight="600" fill="{t['accent']}">{escape(p['headline'])}</text>
+<text x="66" y="228" font-size="22" fill="{t['muted']}">{escape(p['role'])}</text>
 {term}
 <rect x="656" y="92" width="112" height="150" rx="12" fill="{t['panel']}" stroke="{t['line']}" stroke-width="1.5"/>
 <rect x="672" y="106" width="34" height="14" rx="4" fill="{t['warm']}"/><text x="676" y="117" font-size="10" font-weight="700" fill="#fff">PDF</text>
@@ -94,7 +104,7 @@ def header(t):
 <rect x="938" y="92" width="226" height="150" rx="12" fill="{t['panel']}" stroke="{t['line']}" stroke-width="1.5"/>
 {xml_lines}
 """
-    return svg(1200, 320, style, body, f"{p['name']}: {p['headline']} {p['role']}")
+    return svg(1200, 320, style, body, f"Hello, I'm {p['name']}. {p['headline']} {p['role']}")
 
 
 # ---------- the pipeline: every project sits on its stage and moves right over time ----------
