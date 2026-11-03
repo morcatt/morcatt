@@ -15,7 +15,7 @@ person:
     - { cmd: "docker compose up -d", note: infrastructure }
     - { cmd: "chatbot deploy --channel web", note: AI }
     - { cmd: "git tag v1.0 && git push --tags", note: products }
-  languages: Romanian · English · German for business and finance terms, learning the rest
+  languages: Romanian · English · Russian · German for business and finance terms, learning the rest
   links:
     - { label: Website, url: "https://morcatt.github.io" }
     - { label: LinkedIn, url: "https://www.linkedin.com/in/morcatt/" }
