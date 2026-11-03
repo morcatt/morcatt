@@ -61,15 +61,25 @@ def header(t):
         f'<text class="mono t{i}" x="66" y="276" font-size="14" fill="{t["muted"]}" opacity="{1 if i == 0 else 0}">$ {escape(l["cmd"])}'
         f'<tspan fill="{t["accent"]}">  # {escape(l["note"])}</tspan></text>'
         for i, l in enumerate(lines))
+    # each greeting is typed out letter by letter next to its language tag, then the next one takes over
     hellos = p.get("greetings", [])
-    beat, last = 100 / max(len(hellos), 1), len(hellos) - 1
-    hello_css = "".join(
-        f"@keyframes g{i} {{ 0%, {i * beat:.1f}% {{ opacity: 0; transform: translateY(8px); }} {i * beat + 2:.1f}%, {(i + 1) * beat - 2:.1f}% {{ opacity: 1; transform: none; }} {(i + 1) * beat:.1f}%, 100% {{ opacity: 0; transform: translateY(-8px); }} }} .g{i} {{ animation: g{i} {2.2 * len(hellos)}s infinite; }}"
-        for i in range(len(hellos)))
-    hello = "".join(
-        f'<text class="g{i}{" mono" if i == last else ""}" x="66" y="78" font-size="28" font-weight="600" fill="{t["green"] if i == last else t["muted"]}" opacity="{1 if i == 0 else 0}">'
-        f'{escape(h)}{"" if i == last else ","}</text>'
-        for i, h in enumerate(hellos))
+    slot, per_char, char_w = 2.0, 0.07, 18
+    cycle_g, share, last = slot * len(hellos), 100 / max(len(hellos), 1), len(hellos) - 1
+    hello_css, hello = ".cover { display: inline; } @media (prefers-reduced-motion: reduce) { .cover { display: none; } }", ""
+    for i, g in enumerate(hellos):
+        a, b = i * share, (i + 1) * share
+        typed = a + len(g["text"]) * per_char / cycle_g * 100
+        hello_css += (f"@keyframes g{i} {{ 0%, {a:.2f}% {{ opacity: 0; }} {a + .6:.2f}%, {b - .8:.2f}% {{ opacity: 1; }} {b:.2f}%, 100% {{ opacity: 0; }} }}"
+                      f".g{i} {{ animation: g{i} {cycle_g}s infinite; }}"
+                      f"@keyframes c{i} {{ 0%, {a:.2f}% {{ transform: translateX(0); animation-timing-function: steps({len(g['text'])}, end); }} {typed:.2f}%, 100% {{ transform: translateX({len(g['text']) * char_w}px); }} }}"
+                      f".c{i} {{ animation: c{i} {cycle_g}s infinite; }}")
+        color = t["green"] if i == last else t["text"]
+        hello += (f'<g class="g{i}" opacity="{1 if i == 0 else 0}">'
+                  f'<rect x="66" y="55" width="42" height="26" rx="7" fill="none" stroke="{t["green"] if i == last else t["accent"]}" stroke-width="1.5"/>'
+                  f'<text class="mono" x="87" y="73" font-size="12" font-weight="700" text-anchor="middle" fill="{t["green"] if i == last else t["accent"]}">{escape(g["lang"])}</text>'
+                  f'<text class="mono" x="122" y="78" font-size="30" font-weight="600" fill="{color}">{escape(g["text"])}</text>'
+                  f'<g class="cover c{i}"><rect x="120" y="46" width="440" height="42" fill="{t["bg"]}"/><rect x="120" y="46" width="440" height="42" fill="url(#dots)"/>'
+                  f'<rect class="caret" x="121" y="52" width="3" height="32" fill="{color}"/></g></g>')
     style = (f"text {{ font-family: {SANS}; }} .mono {{ font-family: {MONO}; }}" + term_css + hello_css +
              f"@keyframes scan {{ 0% {{ transform: translateY(0); opacity: 0; }} 8% {{ opacity: 1; }} 40% {{ transform: translateY(118px); opacity: 1; }} 46%, 100% {{ transform: translateY(118px); opacity: 0; }} }}"
              f".scan {{ animation: scan {cycle}s infinite; }}"

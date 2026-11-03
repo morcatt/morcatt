@@ -5,7 +5,13 @@ person:
   name: Cătălin
   headline: I build systems that run themselves.
   # The header greets in each language I speak; the last one is for developers who waited.
-  greetings: [Salut, Hello, Привет, Hallo, Hola, "hello, world"]
+  greetings:
+    - { text: "Salut,", lang: RO }
+    - { text: "Hello,", lang: EN }
+    - { text: "Привет,", lang: RU }
+    - { text: "Hallo,", lang: DE }
+    - { text: "Hola,", lang: ES }
+    - { text: "hello, world", lang: "</>" }
   role: Data · Automation · AI · Products · Moldova
   plain: >-
     Companies are full of work people repeat by hand: reading documents, answering the same questions,
