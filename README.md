@@ -1,54 +1,95 @@
-<p align="center"><img src="assets/header.svg" alt="Cătălin: I automate anything that repeats. ETL developer, founder of Morcatt Labs, Moldova."></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg"><img src="assets/header-light.svg" alt="Cătălin: I build systems that run themselves." width="100%"></picture></p>
 
-<p align="center"><img src="assets/stats.svg" alt="5+ years in document data, 500+ extraction templates, ZUGFeRD and XRechnung e-invoicing focus"></p>
+<p align="center"><a href="https://morcatt.github.io"><b>Website</b></a> · <a href="https://www.linkedin.com/in/morcatt/"><b>LinkedIn</b></a> · <a href="https://github.com/morcatt-labs"><b>Morcatt Labs</b></a> · <a href="mailto:catmoroshan@gmail.com"><b>Email</b></a></p>
 
-I turn messy business documents into reliable data for international companies, and I build my own products at [Morcatt Labs](https://github.com/morcatt-labs).
+Companies are full of work people repeat by hand: reading documents, answering the same questions, moving data between systems. I build the systems that take that work over, and my own products on the side. Sleep is in the backlog.
 
-## 💼 At work
+> **Now:** Taking Cattport from public beta into the SynoCommunity package catalog.
 
-**ETL Developer · 5+ years**
+## What I build
 
-- **500+ PDF-to-XML extraction templates,** each one built around a client's documents
-- **Many languages,** from German to Slavic languages and Chinese
-- **ZUGFeRD and XRechnung** e-invoicing now, with past work across other formats including Peppol
-- **Validation:** regex rules and Schematron, with every requirement checked against hundreds of pages of specifications in NotebookLM
-- **Data:** extracted with SQL, analyzed with Python
+<table><tr><td width="50%" valign="top"><h3>⚙️ Automation &amp; data</h3>500+ extraction templates that turn documents in many languages into structured data, validated against international standards.</td><td width="50%" valign="top"><h3>🤖 AI integrations</h3>An AI chatbot for a national telecom operator, from website integration and dialogue flows to identifying customers.</td></tr><tr><td width="50%" valign="top"><h3>🚀 Products &amp; apps</h3>Cattport, an open-source package in public beta, plus websites and web services. Mobile apps are next.</td><td width="50%" valign="top"><h3>🛠️ Infrastructure</h3>My own server with Docker and single sign-on, a smart home, networks and camera systems I installed myself.</td></tr></table>
 
-## 🚀 What I build
+## Selected work
 
-<a href="https://github.com/morcatt-labs/cattport"><img src="https://raw.githubusercontent.com/morcatt-labs/cattport/main/docs/assets/banner.png" alt="Cattport: your Docker services and links, in the Synology DSM menu"></a>
+<details>
+<summary><b>An AI assistant for a national telecom operator</b> · <i>During the pandemic</i></summary>
 
-**[Cattport](https://github.com/morcatt-labs/cattport)** puts Docker services and links right in the Synology DSM menu. Public beta, open source under GPLv3, in every language DSM supports plus Romanian.
+- **Problem:** Customers kept asking the support team the same questions, at a time when everyone moved online.
+- **What I did:** I integrated an AI chatbot platform into the operator's website, built the dialogue flows and connected it to customer identification, so it could recognise who is writing and offer real answers and solutions.
+- **Result:** About 1,000 conversations in its first month, real customers and test runs together. It is still answering customers today, and it has never asked for a day off.
 
-## 🏠 Beyond work
+</details>
 
-I run my own home automation on Zigbee and self-host my services on my own server with Docker, including single sign-on (OIDC). I've also installed surveillance camera systems.
+<details>
+<summary><b>Document data at scale</b> · <i>5+ years, ongoing</i></summary>
 
-## 🧰 Tools
+- **Problem:** International companies receive invoices and business documents in every layout and language, and their systems need clean, standard-compliant data.
+- **What I did:** I build extraction templates that read these documents and turn them into structured XML, then validate the result against EN 16931, ZUGFeRD and XRechnung rules with Schematron.
+- **Result:** More than 500 templates in German, Slavic languages, Chinese and more.
 
-![XML](https://img.shields.io/badge/XML-1F74F5?style=flat-square)
-![Regex](https://img.shields.io/badge/Regex-1F74F5?style=flat-square)
-![Schematron](https://img.shields.io/badge/Schematron-1F74F5?style=flat-square)
-![SQL](https://img.shields.io/badge/SQL-10245C?style=flat-square)
-![Python](https://img.shields.io/badge/Python-10245C?style=flat-square&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-10245C?style=flat-square&logo=javascript&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-10245C?style=flat-square&logo=docker&logoColor=white)
-![OIDC](https://img.shields.io/badge/OIDC-4B5563?style=flat-square)
-![Zigbee](https://img.shields.io/badge/Zigbee-4B5563?style=flat-square&logo=zigbee&logoColor=white)
-![NotebookLM](https://img.shields.io/badge/NotebookLM-4B5563?style=flat-square)
+</details>
 
-## 🛤️ How I got here
+<details>
+<summary><b>A product from idea to release, alone</b> · <i>2026</i></summary>
 
-I earned my first money cleaning yards and washing cars and fences for wealthy families. Everything since, I taught myself or studied for.
+- **Problem:** Synology users run many Docker services and keep their ports and links in bookmarks or in their heads.
+- **What I did:** I designed and built Cattport, which puts those services right into the DSM main menu, with packaging, translations and documentation.
+- **Result:** Public beta, open source under GPLv3, and submitted to the SynoCommunity package catalog.
 
-- **🖥️ Hardware & networks:** PC repair, callback technician, surveillance camera installs
-- **🎨 Design & print:** printing, logo design
-- **🌐 Software:** WordPress sites, university apps, Cattport
-- **📊 Data:** database administration and applied informatics (8 years of study), ETL development
+</details>
 
-## 🤝 Let's talk
+## Projects
 
-I'm looking for roles where I can come up with product ideas, build applications and use AI to solve real problems. E-invoicing and document data are where my experience runs deepest.
+Every project sits on its stage and moves right as it grows.
 
-📺 [morcatt.github.io](https://morcatt.github.io): the same story as a TV you can switch on<br>
-📫 [catmoroshan@gmail.com](mailto:catmoroshan@gmail.com)
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/pipeline-dark.svg"><img src="assets/pipeline-light.svg" alt="Projects by stage" width="100%"></picture>
+
+- **[Cattport](https://github.com/morcatt-labs/cattport)**: Docker services and links in the Synology DSM menu · *beta*
+- **[Cătălin TV](https://morcatt.github.io)**: A personal site you switch on like a TV · *live*
+
+**[Cattport](https://github.com/morcatt-labs/cattport)** · Docker services and links in the Synology DSM menu. Latest release **v1.0.0-beta.3** · GPL-3.0
+
+## Toolbox
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/toolbox-dark.svg"><img src="assets/toolbox-light.svg" alt="Tools I use every week, by area" width="100%"></picture>
+
+<details>
+<summary><b>All 98 tools</b> (bold = every week; turning it off and on again not listed, but certified)</summary>
+
+| Area | Tools |
+|---|---|
+| Data & cloud | **SQL** · **Python** · **Google Cloud** · **BigQuery** · **Cloud SQL** · PostgreSQL · MySQL · SQL Server · Oracle · SQLite · pandas · Advanced Excel |
+| Documents & e-invoicing | **PDF** · **XML** · **ZUGFeRD** · **EN 16931** · **XRechnung** · **Schematron** · **Regex** · **In-house mapping tools** · Factur-X · Peppol · UBL · CII · XSD · JSON · EDIFACT · OCR · DataStage TX-style mapping |
+| Code | **Python** · **Bash** · **Terminal** · C# · Java · JavaScript · HTML & CSS · Tailwind · C++ · PHP · Flask · Node.js · React · Assembly |
+| Infrastructure & security | **Docker** · Docker Compose · Portainer · Linux · Reverse proxy · OIDC / SSO · Git · Cloudflare · WireGuard · Tailscale · Firewall · Backup & restore |
+| Networks & hardware | PC building & repair · LAN & Wi-Fi · Routers · Structured cabling · IP cameras / CCTV · Hikvision · NVR / DVR · Frigate · On-site troubleshooting |
+| Smart home | Home Assistant · Zigbee · Zigbee2MQTT · MQTT · ESPHome · Tuya |
+| AI | **NotebookLM** · **ChatGPT** · **Claude** · **Gemini** · GitHub Copilot · Ollama · LLM APIs · Prompt engineering |
+| Design, video & print | **Photoshop** · **Illustrator** · InDesign · CorelDRAW · Lightroom · Fresco · Figma · Canva · Adobe Firefly · Premiere Pro · After Effects · DaVinci Resolve · Final Cut · WordPress · Elementor · Prepress |
+| Teamwork | **Google Workspace** · Jira · Agile / Scrum · Kanban |
+
+</details>
+
+## Path
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/path-dark.svg"><img src="assets/path-light.svg" alt="Path from first money to Morcatt Labs" width="100%"></picture>
+
+<details>
+<summary><b>How I work</b></summary>
+
+- **Validate against the spec, not the sample.** One invoice that looks right proves nothing; the standard decides.
+- **Automate the second time.** If I do something twice by hand, the third time is a script. The fourth time, I forget the script exists and write a better one.
+- **Ship, then sharpen.** A public beta with real users teaches more than a perfect plan.
+
+</details>
+
+## Let's talk
+
+Got a problem that looks too complicated, or too boring, to automate? Write to me. Boring is my favourite. I'm open to roles where I can shape product ideas, build applications and use AI on real problems, anywhere in the world.
+
+🗣️ Romanian · English · German for business and finance terms, learning the rest
+
+<a href="https://morcatt.github.io"><b>Website</b></a> · <a href="https://www.linkedin.com/in/morcatt/"><b>LinkedIn</b></a> · <a href="https://github.com/morcatt-labs"><b>Morcatt Labs</b></a> · <a href="mailto:catmoroshan@gmail.com"><b>Email</b></a>
+
+<sub>This profile builds itself from <a href="profile.yml">profile.yml</a>. I just take the credit.</sub>
