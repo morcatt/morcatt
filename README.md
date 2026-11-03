@@ -2,7 +2,7 @@
 
 <p align="center"><img src="assets/stats.svg" alt="5+ years in document data, 500+ extraction templates, ZUGFeRD and XRechnung e-invoicing focus"></p>
 
-I started out fixing PCs. Today I turn messy documents into reliable data for international companies, and I build my own products at [Morcatt Labs](https://github.com/morcatt-labs).
+I turn messy business documents into reliable data for international companies, and I build my own products at [Morcatt Labs](https://github.com/morcatt-labs).
 
 ## 💼 At work
 
